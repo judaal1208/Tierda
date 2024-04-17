@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express Factory - Sobre Nosotros</title>
+    <title>Express Factory - Sobre nosotros</title>
     <!-- Enlace al archivo CSS de Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Enlace al archivo CSS personalizado -->
     <link href="../css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/android-icon-36x36.png" type="image/x-icon">
+    <!-- Enlace a la biblioteca de iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* Estilos personalizados para el carrusel */
         .carousel-item {
@@ -128,21 +132,33 @@
         <a class="nav-link" href="redes.html">Redes</a>
         <a class="nav-link" href="inicio_sesion.html">Inicio de sesión</a>
     </nav>
-    
-    <!-- Contenido de la página "Sobre Nosotros" -->
+    <!-- Contenido de la página "Sobre nosotros" -->
     <main class="container mt-5">
-        <h2 class="text-center mb-4">Sobre Nosotros</h2>
-        <p>Somos Express Factory, una tienda de moda urbana especializada en ofrecer la última tendencia en ropa de artistas urbanos colombianos.</p>
-        <p>Nuestro objetivo es brindarte productos de alta calidad que reflejen tu estilo y personalidad, inspirados en la vibrante cultura urbana de Colombia.</p>
-        <p>En Express Factory, nos esforzamos por ofrecerte una experiencia de compra única y satisfactoria. ¡Explora nuestro catálogo y descubre tu próxima prenda favorita!</p>
+        <div class="jumbotron">
+            <h1 class="display-4">Sobre nosotros</h1>
+            <p class="lead">Somos Express Factory, una tienda de moda urbana especializada en ofrecer la última tendencia en ropa de artistas urbanos colombianos. Con más de una década de experiencia en la industria de la moda, nos esforzamos por proporcionarte productos de alta calidad a precios asequibles</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="../index.html" role="button">Explora nuestro catálogo</a>
+            </p>
+        </div>
     </main>
     <!-- Pie de página -->
-    <footer>
-        <div class="container text-center"> <!-- Ajuste para centrar el texto -->
-            <p>&copy; 2024 Express Factory</p>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Redes sociales -->
+            <div class="text-start">
+                <i class="fab fa-facebook"></i><a href="redes.html" class="text-decoration-none text-white me-3">Facebook</a>
+                <i class="fab fa-instagram"></i><a href="redes.html" class="text-decoration-none text-white me-3">Instagram</a>
+                <i class="fab fa-pinterest"></i><a href="redes.html" class="text-decoration-none text-white">Pinterest</a>
+            </div>
+            
+            <!-- Derechos de autor -->
+            <p class="mb-0">© 2024 Express Factory</p>
         </div>
     </footer>
-    <!-- Enlace al archivo JavaScript de Bootstrap 5 -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
