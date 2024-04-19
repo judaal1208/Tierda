@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Factory - Ropa para Mujer</title>
+    <!-- Enlace al archivo CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace al archivo CSS personalizado -->
+    <link href="../css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/android-icon-36x36.png" type="image/x-icon">
+    <!-- Enlace a la biblioteca de iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Estilos personalizados para el carrusel */
+        .carousel-item {
+            height: 400px; /* Establece la altura del carrusel */
+        }
+
+        .carousel-item img {
+            height: 100%; /* Establece la altura de las imágenes en el carrusel */
+            width: auto; /* Permite que el ancho se ajuste automáticamente para mantener la proporción de aspecto */
+        }
+
+        /* Estilos para los controles del carrusel */
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+            font-size: 2rem;
+        }
+
+        /* Estilo para los indicadores de navegación */
+        .carousel-indicators {
+            bottom: -30px;
+        }
+
+        /* Estilo para las pestañas de navegación */
+        .nav-tabs {
+            background-color: #000; /* Color de fondo */
+            border-radius: 0; /* Sin bordes redondeados */
+            margin-bottom: 20px; /* Espaciado inferior */
+        }
+
+        .nav-link {
+            color: #fff; /* Color del texto */
+            font-size: 1.2rem; /* Tamaño de fuente */
+            padding: 10px 20px; /* Espaciado interno */
+        }
+
+        .nav-link:hover {
+            background-color: #333; /* Color de fondo al pasar el mouse */
+        }
+
+        .nav-link.active {
+            background-color: #333; /* Color de fondo activo */
+        }
+
+        /* Estilos para el contenido de la página */
+        .container {
+            max-width: 800px; /* Ancho máximo del contenido */
+        }
+
+        .jumbotron {
+            background-color: #fff; /* Color de fondo del jumbotron */
+            color: #000; /* Color del texto del jumbotron */
+            padding: 2rem; /* Espaciado interno */
+            margin-bottom: 2rem; /* Espaciado inferior */
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #000; /* Color de fondo */
+            color: #fff; /* Color del texto */
+            text-align: right; /* Alineación del texto al centro */
+            padding: 20px 0; /* Espaciado interno */
+        }
+
+        /* Estilos para los botones */
+        .btn-primary {
+            background-color: #000000; /* Color de fondo */
+            border-color: #000; /* Color del borde */
+            color: #fff; /* Color del texto */
+        }
+
+        .btn-primary:hover {
+            background-color: #333; /* Color de fondo al pasar el mouse */
+            border-color: #333; /* Color del borde al pasar el mouse */
+        }
+
+        /* Estilo para las tarjetas */
+        .card {
+            height: 100%;
+            border: 1px solid transparent; /* Borde transparente por defecto */
+            transition: border-color 0.3s; /* Transición para el cambio de color del borde */
+        }
+
+        /* Estilo para resaltar las tarjetas al pasar el mouse */
+        .card:hover {
+            border-color: #000; /* Color del borde al pasar el mouse */
+        }
+
+        /* Estilo para el texto dentro de las tarjetas */
+        .card-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            color: #fff; /* Color del texto */
+            padding: 10px; /* Espaciado interno */
+            margin: 0; /* Elimina el margen */
+            text-align: center; /* Alineación centrada */
+            font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+        }
+
+        /* Estilo para las imágenes dentro de las tarjetas */
+        .card-img-top {
+            height: 300px; /* Altura fija de la imagen */
+            object-fit: cover; /* Ajuste del tamaño de la imagen */
+        }
+    </style>
+</head>
+<body>
+    <!-- Carrusel -->
+    <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+        <!-- Contenido del carrusel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/carrusel1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/carrusel2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/carrusel3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/carrusel4.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <!-- Botones de control del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+        <!-- Indicadores de navegación del carrusel -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleControls" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleControls" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselExampleControls" data-bs-slide-to="3"></li>
+        </ol>
+    </div>
+    <!-- Pestañas de navegación -->
+    <nav class="nav nav-tabs justify-content-center">
+        <a class="nav-link" href="../index.html">Inicio</a>
+        <a class="nav-link" href="sobre_nosotros.html">Sobre nosotros</a>
+        <a class="nav-link active" aria-current="page" href="hombre.html">Ropa Hombre</a>
+        <a class="nav-link" href="mujer.html">Ropa Mujer</a>
+        <a class="nav-link" href="redes.html">Redes</a>
+        <a class="nav-link" href="inicio_sesion.html">Inicio de sesión</a>
+    </nav>
+    <!-- Contenido de la página "Hombre" -->
+    <main class="container mt-5">
+        <h2>Ropa para Hombre</h2>
+        <p>Bienvenido a nuestra sección de ropa para hombre, donde encontrarás una amplia selección de productos de moda masculina para todas las ocasiones.</p>
+        <p>Desde camisetas y pantalones casuales hasta trajes elegantes, tenemos todo lo que necesitas para lucir a la moda y sentirte cómodo en cualquier momento del día.</p>
+        <p>Explora nuestro catálogo y descubre las últimas tendencias en moda masculina.</p>
+
+        <!-- Tarjetas -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <div class="col">
+                <div class="card position-relative">
+                    <img src="../img/bles3.jpg" class="card-img-top" alt="...">
+                    <div class="card-text">
+                        <p class="card-description">Esto es un hoodie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card position-relative">
+                    <img src="../img/Ferxo1.jpg" class="card-img-top" alt="...">
+                    <div class="card-text">
+                        <p class="card-description">Esto es un hoodie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card position-relative">
+                    <img src="../img/ferxo2.jpg" class="card-img-top" alt="...">
+                    <div class="card-text">
+                        <p class="card-description">Esto es un hoodie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card position-relative">
+                    <img src="../img/bles.jpg" class="card-img-top" alt="...">
+                    <div class="card-text">
+                        <p class="card-description">Esto es un hoodie.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card position-relative">
+                    <img src="../img/bles1.jpg" class="card-img-top" alt="...">
+                    <div class="card-text">
+                        <p class="card-description">Esto es un hoodie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card position-relative">
+                    <img src="../img/bles4.jpg" class="card-img-top" alt="...">
+                    <div class="card-text">
+                        <p class="card-description">Esto es un hoodie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mini botón "Comprar" -->
+        <div class="text-center mt-4">
+            <a href="inicio_sesion.html" class="btn btn-primary">Comprar</a>
+        </div>
+    </main>
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Redes sociales -->
+            <div class="text-start">
+                <i class="fab fa-facebook"></i><a href="redes.html" class="text-decoration-none text-white me-3">Facebook</a>
+                <i class="fab fa-instagram"></i><a href="redes.html" class="text-decoration-none text-white me-3">Instagram</a>
+                <i class="fab fa-pinterest"></i><a href="redes.html" class="text-decoration-none text-white">Pinterest</a>
+            </div>
+            
+            <!-- Derechos de autor -->
+            <p class="mb-0">© 2024 Express Factory</p>
+            </div>
+            </footer>
+            
+            <!-- Scripts de Bootstrap -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+            </body>
+            
+            </html>
